@@ -2,11 +2,11 @@
 // creat a questions object that holds questions and answers
 
 // set a timer to start when you click begin
-var i = 60;
+var i = 30;
 var answers = [];
 var correct = 0;
 var incorrect = 0;
-
+var time = true;
 function startTimer() {
 
     var countdownTimer = setInterval(function() {
@@ -21,12 +21,16 @@ function startTimer() {
                 "<h1> Game over Dude </h1>",
             )
         }
+        else if ($(".submit").on("click", function(){
+            clearInterval(countdownTimer);
+        }));
 
     }, 1000);
 
 }
-
+if (time = true){
 startTimer(); 
+}
 
 // run function to display questions on html
 $(".btn").on("click", function(){
@@ -50,11 +54,12 @@ function checker (){
 
 $(".submit").on("click", function(){
     checker();
-    clearInterval(i + 1);
+    clearInterval(i);
     $(".questions").html(
-        "<h1> Correct: " + correct + "</h1>",
-        "<h1> Wrong: " + incorrect + "</h1>",
+        "<h1> Correct: " + correct + "</h1>" +
+        "<h1> Wrong: " + incorrect + "</h1>"
     );
+    console.log(incorrect);
 })
 // privide input fields for user, store user input
 

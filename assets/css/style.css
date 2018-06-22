@@ -1,0 +1,39 @@
+body {
+    background-image: url(https://i.ytimg.com/vi/Ivs0JoaoNLU/maxresdefault.jpg)
+}
+
+.container {
+    position: relative;
+    margin: 10%;
+}
+
+.title {
+    font-size: 100px;
+    position: relative;
+    left: 25%;
+}
+
+.game {
+    position: relative;
+    left:25%;
+}
+
+.submit {
+    background-color: black;
+    color:white;
+    height: 100px;
+    width: 300px;
+    position: relative;
+    left: 15%;
+    font-size: 50px;
+    margin-top: 5%;
+}
+
+.awful {
+    font-size: 35px;
+    margin-top:2%;
+    margin-bottom:2%;
+}
+.btn {
+    font-size: 50px;
+}
