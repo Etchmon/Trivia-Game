@@ -23,7 +23,7 @@ function startTimer() {
                 "<h1 id='over'> Correct: " + correct + "</h1>" +
                 "<h1 id='over'> Wrong: " + incorrect + "</h1>"
             );
-            checker();
+            
             
         }
         else if ($(".submit").on("click", function(){
@@ -38,8 +38,11 @@ startTimer();
 }
 
 // run function to display questions on html
+
 $(".btn").on("click", function(){
+    
     var haha = $(this).val();
+    
     answers.push(haha);
 
     console.log(answers);
@@ -59,11 +62,12 @@ function checker (){
 };
 
 $(".submit").on("click", function(){
+
     checker();
     clearInterval(i);
     $(".questions").html(
         "<h1 id='over'> Correct: " + correct + "</h1>" +
-        "<h1 id='over'> Wrong: " + incorrect + "</h1>"
+        "<h1 id-'over'> Wrong: " + incorrect + "</h1>"
     );
     console.log(incorrect);
 })
