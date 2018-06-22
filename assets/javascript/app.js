@@ -17,9 +17,14 @@ function startTimer() {
 
         if (i <= 0) {
             clearInterval(countdownTimer);
+            checker();
             $(".game").html(
-                "<h1> Game over Dude </h1>",
-            )
+                "<h1> Game over Dude </h1>" +
+                "<h1> Correct: " + correct + "</h1>" +
+                "<h1> Wrong: " + incorrect + "</h1>"
+            );
+            checker();
+            
         }
         else if ($(".submit").on("click", function(){
             clearInterval(countdownTimer);
@@ -48,6 +53,7 @@ function checker (){
         else {
             incorrect++;
         }
+    
     }
 
 };
