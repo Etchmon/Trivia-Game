@@ -19,9 +19,9 @@ function startTimer() {
             clearInterval(countdownTimer);
             checker();
             $(".game").html(
-                "<h1> Game over Dude </h1>" +
-                "<h1> Correct: " + correct + "</h1>" +
-                "<h1> Wrong: " + incorrect + "</h1>"
+                "<h1 id='over'> Game over Dude </h1>" +
+                "<h1 id='over'> Correct: " + correct + "</h1>" +
+                "<h1 id='over'> Wrong: " + incorrect + "</h1>"
             );
             checker();
             
@@ -62,8 +62,8 @@ $(".submit").on("click", function(){
     checker();
     clearInterval(i);
     $(".questions").html(
-        "<h1> Correct: " + correct + "</h1>" +
-        "<h1> Wrong: " + incorrect + "</h1>"
+        "<h1 id='over'> Correct: " + correct + "</h1>" +
+        "<h1 id='over'> Wrong: " + incorrect + "</h1>"
     );
     console.log(incorrect);
 })
