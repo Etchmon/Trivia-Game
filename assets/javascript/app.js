@@ -67,7 +67,7 @@ $(".submit").on("click", function(){
     clearInterval(i);
     $(".questions").html(
         "<h1 id='over'> Correct: " + correct + "</h1>" +
-        "<h1 id-'over'> Wrong: " + incorrect + "</h1>"
+        "<h1 id='over'> Wrong: " + incorrect + "</h1>"
     );
     console.log(incorrect);
 })
