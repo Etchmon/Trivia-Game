@@ -39,24 +39,19 @@ startTimer();
 
 // run function to display questions on html
 
-$(".btn").on("click", function(){
-    
-    var haha = $(this).val();
-    
-    answers.push(haha);
 
-    console.log(answers);
-});
 
 function checker (){
-    for (i=0; i<answers.length; i++){
-        if(answers[i] === "true"){
-            correct++;
-        }
-        else {
-            incorrect++;
-        }
-    
+    for(i=0; i<7; i++){
+        var temp = $("input[name=quiz"+i+"]:checked").val();
+        answers.push(temp);
+        console.log(answers);
+    }
+    if ( answers[i] === "true"){
+        correct++;
+    }
+    else{
+        incorrect++;
     }
 
 };
